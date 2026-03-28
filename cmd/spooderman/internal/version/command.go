@@ -22,12 +22,12 @@ func NewVersionCommand() *cobra.Command {
 }
 
 func printVersion() {
-	fmt.Printf("%s  spooderman %s\n", pkg.Logo, config.FormatVersion())
+	fmt.Printf("\t\t\t%s  spooderman %s\n", pkg.Logo, config.FormatVersion())
 	build, goVer := config.FormatBuildInfo()
 	if build != "" {
-		fmt.Printf("   Build: %s\n", build)
+		fmt.Printf("\t\t\t   Build: %s\n", build)
 	}
 	if goVer != "" {
-		fmt.Printf("   Go version: %s\n", goVer)
+		fmt.Printf("\t\t\t   Go version: %s\n", goVer)
 	}
 }
