@@ -1,5 +1,7 @@
 package pkg
 
 const (
-	Logo = "🕷️"
+	Logo                  = "🕷️"
+	DefaultSpoodermanHome = "/.spooderman"
+	WorkspaceName         = "workspace"
 )

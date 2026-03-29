@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/minhnghia2k3/spooderman/cmd/spooderman/internal/status"
 	"github.com/minhnghia2k3/spooderman/cmd/spooderman/internal/version"
 	"github.com/minhnghia2k3/spooderman/pkg"
 	"github.com/minhnghia2k3/spooderman/pkg/config"
@@ -20,6 +21,7 @@ func NewSpoodermanCommand() *cobra.Command {
 	}
 
 	cmd.AddCommand(
+		status.NewStatusCommand(),
 		version.NewVersionCommand(),
 	)
 

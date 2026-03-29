@@ -14,20 +14,20 @@ func NewVersionCommand() *cobra.Command {
 		Aliases: []string{"v"},
 		Short:   "Show version information",
 		Run: func(_ *cobra.Command, _ []string) {
-			printVersion()
+			PrintVersion()
 		},
 	}
 
 	return cmd
 }
 
-func printVersion() {
-	fmt.Printf("\t\t\t%s  spooderman %s\n", pkg.Logo, config.FormatVersion())
+func PrintVersion() {
+	fmt.Printf("\n%s  spooderman %s\n", pkg.Logo, config.FormatVersion())
 	build, goVer := config.FormatBuildInfo()
 	if build != "" {
-		fmt.Printf("\t\t\t   Build: %s\n", build)
+		fmt.Printf("   Build: %s\n", build)
 	}
 	if goVer != "" {
-		fmt.Printf("\t\t\t   Go version: %s\n", goVer)
+		fmt.Printf("   Go version: %s\n\n", goVer)
 	}
 }
